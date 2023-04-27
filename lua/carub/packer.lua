@@ -76,10 +76,17 @@ return require('packer').startup(function(use)
       end
   }
 
-  use 'nvim-lualine/lualine.nvim' -- Fancier statusline
+  use ('nvim-lualine/lualine.nvim') -- Fancier statusline
 
-  use 'nvim-tree/nvim-tree.lua' -- VScode like tree file explorer
+  use ('nvim-tree/nvim-tree.lua') -- VScode like tree file explorer
 
-  use 'Decodetalkers/csv-tools.lua' -- CSV file usage
+  use ('Decodetalkers/csv-tools.lua') -- CSV file usage
+
+  use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+          require('gitsigns').setup()
+      end
+  }
 
 end)
