@@ -43,6 +43,7 @@ keymap.set("n", "<C-l>", "<C-w>l") -- go to split on the right
 keymap.set("n", "<C-j>", "<C-w>j") -- go to split down
 keymap.set("n", "<C-k>", "<C-w>k") -- go to split up
 
+keymap.set("n", "<leader>w", ":w<CR>")
 -- nvim-tree
 keymap.set("n", "<leader>ep", ":NvimTreeToggle<CR>")
 
