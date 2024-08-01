@@ -16,7 +16,7 @@ keymap.set("n", "<C-m>", "<C-o>") -- Jump to previous in jump list
 keymap.set("n", "<C-n>", "<C-i>") -- Jump to next in jump list
 --keymap.set("n", "<C-@>", "<C-Space>")
 
-    keymap.set("n", "<C-w>", "<C-e>") -- Scroll down
+keymap.set("n", "<C-s>", "<C-e>") -- Scroll down
 
 -- Keep searchterms in the middle of the page
 keymap.set("n", "n", "nzzzv")
@@ -46,6 +46,10 @@ keymap.set("n", "<C-k>", "<C-w>k") -- go to split up
 keymap.set("n", "<leader>w", ":w<CR>")
 -- nvim-tree
 keymap.set("n", "<leader>ep", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>G", ":Git<CR>")
+
+keymap.set("n", "<leader>rn", ":set rnu<CR>")
+keymap.set("n", "<leader>nrn", ":set nornu<CR>")
 
 -- Indent remaps. In LA input source in MAC, < & > don't exist
 -- keymap.set("n", "<minus>", "<")

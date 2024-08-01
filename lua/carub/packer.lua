@@ -8,8 +8,8 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use ({
-	  'nvim-telescope/telescope-fzf-native.nvim',
-	  run = "make"
+	 'nvim-telescope/telescope-fzf-native.nvim',
+	  run = 'make'
   })
 
   use { -- Fuzzy finder
@@ -22,7 +22,7 @@ return require('packer').startup(function(use)
 	  'folke/tokyonight.nvim',
 	  as = 'tokyonight',
 	  run = function()
-		  print("Hello from colorscheme")
+		  print('Hello from colorscheme')
 	  end,
 	  config = function()
 		  vim.cmd('colorscheme tokyonight')
@@ -79,6 +79,7 @@ return require('packer').startup(function(use)
   use ('nvim-lualine/lualine.nvim') -- Fancier statusline
 
   use ('nvim-tree/nvim-tree.lua') -- VScode like tree file explorer
+  use ('nvim-tree/nvim-web-devicons')
 
   use ('Decodetalkers/csv-tools.lua') -- CSV file usage
 
@@ -88,5 +89,19 @@ return require('packer').startup(function(use)
           require('gitsigns').setup()
       end
   }
+
+  use('ixru/nvim-markdown')
+  use('tpope/vim-fugitive')
+
+  use('christoomey/vim-tmux-navigator')
+
+    use {
+        'zbirenbaum/copilot.lua',
+        cmd = 'Copilot',
+        event = 'InsertEnter',
+        config = function()
+            require('copilot').setup({})
+        end
+    }
 
 end)

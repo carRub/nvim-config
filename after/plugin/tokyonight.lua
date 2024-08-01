@@ -1,6 +1,10 @@
 require('tokyonight').setup({
 	style = "storm",
 	terminal_colors = true,
+    CursorLine = {
+        -- bg = "#2a2e3d"
+        bg = "#222326"
+    }
   })
 
 --local builtin = require('telescope.builtin')
