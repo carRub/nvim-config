@@ -35,7 +35,7 @@ keymap.set("v", "x", "\"_x")
 
 -- Split windows
 keymap.set("n", "<leader>sv", "<C-w>v") -- split vertically
-keymap.set("n", "<leader>ss", "<C-w>s") -- split horizontally
+keymap.set("n", "<leader>sh", "<C-w>s") -- split horizontally
 keymap.set("n", "<leader>se", "<C-w>=") -- equal width
 keymap.set("n", "<leader>sx", ":close<CR>") -- close current split
 keymap.set("n", "<C-h>", "<C-w>h") -- go to split on the left
@@ -45,11 +45,13 @@ keymap.set("n", "<C-k>", "<C-w>k") -- go to split up
 
 keymap.set("n", "<leader>w", ":w<CR>")
 -- nvim-tree
-keymap.set("n", "<leader>ep", ":NvimTreeToggle<CR>")
+keymap.set("n", "<leader>fi", ":NvimTreeToggle<CR>")
 keymap.set("n", "<leader>G", ":Git<CR>")
 
-keymap.set("n", "<leader>rn", ":set rnu<CR>")
-keymap.set("n", "<leader>nrn", ":set nornu<CR>")
+keymap.set("n", "<leader>rn", ":set rnu<CR>") -- set relative numbers
+keymap.set("n", "<leader>nrn", ":set nornu<CR>") -- unset relative numbers
+
+keymap.set("n", "<leader>pw", ":echo expand('%:p')<CR>") -- print current file location
 
 -- Indent remaps. In LA input source in MAC, < & > don't exist
 -- keymap.set("n", "<minus>", "<")

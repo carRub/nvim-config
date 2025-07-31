@@ -1,0 +1,2 @@
+require('palenightfall').setup({
+})

@@ -8,6 +8,7 @@ lsp.ensure_installed({
 	'eslint',
     --'sumneko_lua',
 	'pyright',
+    'clojure_lsp'
 })
 
 local cmp = require('cmp')

@@ -39,7 +39,7 @@ opt.updatetime = 1000
 opt.timeoutlen = 1250
 
 -- color column
-opt.colorcolumn = "80"
+opt.colorcolumn = "100"
 
 -- map leader to blank space
 vim.g.mapleader = " "

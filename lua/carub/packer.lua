@@ -18,19 +18,17 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
-  use ({ -- colorscheme
-	  'folke/tokyonight.nvim',
-	  as = 'tokyonight',
-	  run = function()
-		  print('Hello from colorscheme')
-	  end,
-	  config = function()
-		  vim.cmd('colorscheme tokyonight')
-	  end
-
-  })
+  -- use ({ -- colorscheme
+	 --  'folke/tokyonight.nvim',
+	 --  as = 'tokyonight',
+	 --  config = function()
+		--   vim.cmd('colorscheme tokyonight')
+	 --  end
+  --
+  -- })
 
   -- use 'drewtempelmeyer/palenight.vim'
+  use 'JoosepAlviste/palenightfall.nvim'
 
   use { -- Highlight, edit, and navigate code
 	  'nvim-treesitter/nvim-treesitter',
@@ -81,7 +79,7 @@ return require('packer').startup(function(use)
   use ('nvim-tree/nvim-tree.lua') -- VScode like tree file explorer
   use ('nvim-tree/nvim-web-devicons')
 
-  use ('Decodetalkers/csv-tools.lua') -- CSV file usage
+  -- use ('Decodetalkers/csv-tools.lua') -- CSV file usage
 
   use {
       'lewis6991/gitsigns.nvim',
@@ -103,5 +101,7 @@ return require('packer').startup(function(use)
             require('copilot').setup({})
         end
     }
+
+    use 'Olical/conjure'
 
 end)
