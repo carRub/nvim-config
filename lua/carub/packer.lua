@@ -18,6 +18,11 @@ return require('packer').startup(function(use)
 	  requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+  use {
+      'ruifm/gitlinker.nvim',
+      requires = 'nvim-lua/plenary.nvim',
+  }
+
   -- use ({ -- colorscheme
 	 --  'folke/tokyonight.nvim',
 	 --  as = 'tokyonight',
